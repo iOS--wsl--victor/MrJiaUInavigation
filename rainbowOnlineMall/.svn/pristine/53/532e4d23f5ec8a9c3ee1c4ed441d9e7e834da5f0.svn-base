@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		40DC57A7C1AB36D8A84BB419 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3029E8D8046A9CBF347836BD /* libPods.a */; };
+		5F70B7411B13FE920030C8CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F70B7401B13FE920030C8CC /* main.m */; };
+		5F70B74C1B13FE920030C8CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F70B74B1B13FE920030C8CC /* Images.xcassets */; };
+		5F70B75B1B13FE920030C8CC /* rainbowOnlineMallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F70B75A1B13FE920030C8CC /* rainbowOnlineMallTests.m */; };
+		5F70B7691B1401AF0030C8CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F70B7671B1401AF0030C8CC /* AppDelegate.m */; };
+		5F70B7701B1403CF0030C8CC /* MallTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F70B76F1B1403CF0030C8CC /* MallTabBarController.m */; };
+		5F70B7731B1403E50030C8CC /* MallBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F70B7721B1403E50030C8CC /* MallBaseViewController.m */; };
+		5F70B7781B1406180030C8CC /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F70B7771B1406180030C8CC /* HomeViewController.m */; };
+		5F70B77B1B1406240030C8CC /* MyselfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F70B77A1B1406240030C8CC /* MyselfViewController.m */; };
+		5F70B77E1B1406440030C8CC /* ShoppingCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F70B77D1B1406440030C8CC /* ShoppingCartViewController.m */; };
+		5F70B7861B14087D0030C8CC /* MallTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F70B7811B14087D0030C8CC /* MallTabBar.m */; };
+		5F70B7871B14087D0030C8CC /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F70B7831B14087D0030C8CC /* UIBarButtonItem+Extension.m */; };
+		5F70B7881B14087D0030C8CC /* UIView+HY.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F70B7851B14087D0030C8CC /* UIView+HY.m */; };
+		5F70B78B1B1416660030C8CC /* Home_ClassificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F70B78A1B1416660030C8CC /* Home_ClassificationViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5F70B7551B13FE920030C8CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F70B7331B13FE920030C8CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F70B73A1B13FE920030C8CC;
+			remoteInfo = rainbowOnlineMall;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3029E8D8046A9CBF347836BD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A756CA91557C61F6076C329 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5F70B73B1B13FE920030C8CC /* rainbowOnlineMall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rainbowOnlineMall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F70B73F1B13FE920030C8CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F70B7401B13FE920030C8CC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5F70B74B1B13FE920030C8CC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5F70B7541B13FE920030C8CC /* rainbowOnlineMallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rainbowOnlineMallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F70B7591B13FE920030C8CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F70B75A1B13FE920030C8CC /* rainbowOnlineMallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rainbowOnlineMallTests.m; sourceTree = "<group>"; };
+		5F70B7661B1401AF0030C8CC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5F70B7671B1401AF0030C8CC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5F70B7681B1401AF0030C8CC /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5F70B76E1B1403CF0030C8CC /* MallTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallTabBarController.h; sourceTree = "<group>"; };
+		5F70B76F1B1403CF0030C8CC /* MallTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallTabBarController.m; sourceTree = "<group>"; };
+		5F70B7711B1403E50030C8CC /* MallBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallBaseViewController.h; sourceTree = "<group>"; };
+		5F70B7721B1403E50030C8CC /* MallBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallBaseViewController.m; sourceTree = "<group>"; };
+		5F70B7741B14047F0030C8CC /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		5F70B7761B1406180030C8CC /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		5F70B7771B1406180030C8CC /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		5F70B7791B1406240030C8CC /* MyselfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyselfViewController.h; sourceTree = "<group>"; };
+		5F70B77A1B1406240030C8CC /* MyselfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyselfViewController.m; sourceTree = "<group>"; };
+		5F70B77C1B1406440030C8CC /* ShoppingCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCartViewController.h; sourceTree = "<group>"; };
+		5F70B77D1B1406440030C8CC /* ShoppingCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartViewController.m; sourceTree = "<group>"; };
+		5F70B7801B14087D0030C8CC /* MallTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallTabBar.h; sourceTree = "<group>"; };
+		5F70B7811B14087D0030C8CC /* MallTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallTabBar.m; sourceTree = "<group>"; };
+		5F70B7821B14087D0030C8CC /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		5F70B7831B14087D0030C8CC /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		5F70B7841B14087D0030C8CC /* UIView+HY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HY.h"; sourceTree = "<group>"; };
+		5F70B7851B14087D0030C8CC /* UIView+HY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HY.m"; sourceTree = "<group>"; };
+		5F70B7891B1416660030C8CC /* Home_ClassificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Home_ClassificationViewController.h; sourceTree = "<group>"; };
+		5F70B78A1B1416660030C8CC /* Home_ClassificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Home_ClassificationViewController.m; sourceTree = "<group>"; };
+		84D4BECA309500835083896E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5F70B7381B13FE920030C8CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40DC57A7C1AB36D8A84BB419 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F70B7511B13FE920030C8CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5BCACD6163111069B069AFDB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84D4BECA309500835083896E /* Pods.debug.xcconfig */,
+				4A756CA91557C61F6076C329 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5F70B7321B13FE920030C8CC = {
+			isa = PBXGroup;
+			children = (
+				5F70B73D1B13FE920030C8CC /* rainbowOnlineMall */,
+				5F70B7571B13FE920030C8CC /* rainbowOnlineMallTests */,
+				5F70B73C1B13FE920030C8CC /* Products */,
+				5BCACD6163111069B069AFDB /* Pods */,
+				847FBCAE55A7A0B9D88D7760 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5F70B73C1B13FE920030C8CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F70B73B1B13FE920030C8CC /* rainbowOnlineMall.app */,
+				5F70B7541B13FE920030C8CC /* rainbowOnlineMallTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F70B73D1B13FE920030C8CC /* rainbowOnlineMall */ = {
+			isa = PBXGroup;
+			children = (
+				5F70B76B1B1403090030C8CC /* Main */,
+				5F70B76A1B1403090030C8CC /* HomePage */,
+				5F70B76D1B1403090030C8CC /* ShoppingCart */,
+				5F70B76C1B1403090030C8CC /* Myself */,
+				5F70B7751B1406050030C8CC /* Tools */,
+				5F70B74B1B13FE920030C8CC /* Images.xcassets */,
+				5F70B7651B1401AF0030C8CC /* Other */,
+				5F70B73E1B13FE920030C8CC /* Supporting Files */,
+			);
+			path = rainbowOnlineMall;
+			sourceTree = "<group>";
+		};
+		5F70B73E1B13FE920030C8CC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5F70B73F1B13FE920030C8CC /* Info.plist */,
+				5F70B7401B13FE920030C8CC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5F70B7571B13FE920030C8CC /* rainbowOnlineMallTests */ = {
+			isa = PBXGroup;
+			children = (
+				5F70B75A1B13FE920030C8CC /* rainbowOnlineMallTests.m */,
+				5F70B7581B13FE920030C8CC /* Supporting Files */,
+			);
+			path = rainbowOnlineMallTests;
+			sourceTree = "<group>";
+		};
+		5F70B7581B13FE920030C8CC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5F70B7591B13FE920030C8CC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5F70B7651B1401AF0030C8CC /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				5F70B7741B14047F0030C8CC /* Header.h */,
+				5F70B7661B1401AF0030C8CC /* AppDelegate.h */,
+				5F70B7671B1401AF0030C8CC /* AppDelegate.m */,
+				5F70B7681B1401AF0030C8CC /* PrefixHeader.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		5F70B76A1B1403090030C8CC /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				5F70B7761B1406180030C8CC /* HomeViewController.h */,
+				5F70B7771B1406180030C8CC /* HomeViewController.m */,
+				5F70B7891B1416660030C8CC /* Home_ClassificationViewController.h */,
+				5F70B78A1B1416660030C8CC /* Home_ClassificationViewController.m */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		5F70B76B1B1403090030C8CC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5F70B76E1B1403CF0030C8CC /* MallTabBarController.h */,
+				5F70B76F1B1403CF0030C8CC /* MallTabBarController.m */,
+				5F70B7711B1403E50030C8CC /* MallBaseViewController.h */,
+				5F70B7721B1403E50030C8CC /* MallBaseViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5F70B76C1B1403090030C8CC /* Myself */ = {
+			isa = PBXGroup;
+			children = (
+				5F70B7791B1406240030C8CC /* MyselfViewController.h */,
+				5F70B77A1B1406240030C8CC /* MyselfViewController.m */,
+			);
+			path = Myself;
+			sourceTree = "<group>";
+		};
+		5F70B76D1B1403090030C8CC /* ShoppingCart */ = {
+			isa = PBXGroup;
+			children = (
+				5F70B77C1B1406440030C8CC /* ShoppingCartViewController.h */,
+				5F70B77D1B1406440030C8CC /* ShoppingCartViewController.m */,
+			);
+			path = ShoppingCart;
+			sourceTree = "<group>";
+		};
+		5F70B7751B1406050030C8CC /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				5F70B77F1B14087D0030C8CC /* Tabbar */,
+				5F70B7841B14087D0030C8CC /* UIView+HY.h */,
+				5F70B7851B14087D0030C8CC /* UIView+HY.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		5F70B77F1B14087D0030C8CC /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				5F70B7801B14087D0030C8CC /* MallTabBar.h */,
+				5F70B7811B14087D0030C8CC /* MallTabBar.m */,
+				5F70B7821B14087D0030C8CC /* UIBarButtonItem+Extension.h */,
+				5F70B7831B14087D0030C8CC /* UIBarButtonItem+Extension.m */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		847FBCAE55A7A0B9D88D7760 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3029E8D8046A9CBF347836BD /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5F70B73A1B13FE920030C8CC /* rainbowOnlineMall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F70B75E1B13FE920030C8CC /* Build configuration list for PBXNativeTarget "rainbowOnlineMall" */;
+			buildPhases = (
+				C6BCBE757D7741FBD2BEB79A /* Check Pods Manifest.lock */,
+				5F70B7371B13FE920030C8CC /* Sources */,
+				5F70B7381B13FE920030C8CC /* Frameworks */,
+				5F70B7391B13FE920030C8CC /* Resources */,
+				F2AA9B3F0DEF06B779F768A2 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = rainbowOnlineMall;
+			productName = rainbowOnlineMall;
+			productReference = 5F70B73B1B13FE920030C8CC /* rainbowOnlineMall.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5F70B7531B13FE920030C8CC /* rainbowOnlineMallTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F70B7611B13FE920030C8CC /* Build configuration list for PBXNativeTarget "rainbowOnlineMallTests" */;
+			buildPhases = (
+				5F70B7501B13FE920030C8CC /* Sources */,
+				5F70B7511B13FE920030C8CC /* Frameworks */,
+				5F70B7521B13FE920030C8CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F70B7561B13FE920030C8CC /* PBXTargetDependency */,
+			);
+			name = rainbowOnlineMallTests;
+			productName = rainbowOnlineMallTests;
+			productReference = 5F70B7541B13FE920030C8CC /* rainbowOnlineMallTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5F70B7331B13FE920030C8CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Mr_ Jia";
+				TargetAttributes = {
+					5F70B73A1B13FE920030C8CC = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					5F70B7531B13FE920030C8CC = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 5F70B73A1B13FE920030C8CC;
+					};
+				};
+			};
+			buildConfigurationList = 5F70B7361B13FE920030C8CC /* Build configuration list for PBXProject "rainbowOnlineMall" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5F70B7321B13FE920030C8CC;
+			productRefGroup = 5F70B73C1B13FE920030C8CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5F70B73A1B13FE920030C8CC /* rainbowOnlineMall */,
+				5F70B7531B13FE920030C8CC /* rainbowOnlineMallTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5F70B7391B13FE920030C8CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F70B74C1B13FE920030C8CC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F70B7521B13FE920030C8CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C6BCBE757D7741FBD2BEB79A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F2AA9B3F0DEF06B779F768A2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5F70B7371B13FE920030C8CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F70B7691B1401AF0030C8CC /* AppDelegate.m in Sources */,
+				5F70B7861B14087D0030C8CC /* MallTabBar.m in Sources */,
+				5F70B7411B13FE920030C8CC /* main.m in Sources */,
+				5F70B77B1B1406240030C8CC /* MyselfViewController.m in Sources */,
+				5F70B7701B1403CF0030C8CC /* MallTabBarController.m in Sources */,
+				5F70B7881B14087D0030C8CC /* UIView+HY.m in Sources */,
+				5F70B7781B1406180030C8CC /* HomeViewController.m in Sources */,
+				5F70B78B1B1416660030C8CC /* Home_ClassificationViewController.m in Sources */,
+				5F70B7871B14087D0030C8CC /* UIBarButtonItem+Extension.m in Sources */,
+				5F70B7731B1403E50030C8CC /* MallBaseViewController.m in Sources */,
+				5F70B77E1B1406440030C8CC /* ShoppingCartViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F70B7501B13FE920030C8CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F70B75B1B13FE920030C8CC /* rainbowOnlineMallTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5F70B7561B13FE920030C8CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F70B73A1B13FE920030C8CC /* rainbowOnlineMall */;
+			targetProxy = 5F70B7551B13FE920030C8CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5F70B75C1B13FE920030C8CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5F70B75D1B13FE920030C8CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5F70B75F1B13FE920030C8CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84D4BECA309500835083896E /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/rainbowOnlineMall/Other/PrefixHeader.pch";
+				INFOPLIST_FILE = rainbowOnlineMall/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
+			};
+			name = Debug;
+		};
+		5F70B7601B13FE920030C8CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A756CA91557C61F6076C329 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/rainbowOnlineMall/Other/PrefixHeader.pch";
+				INFOPLIST_FILE = rainbowOnlineMall/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
+			};
+			name = Release;
+		};
+		5F70B7621B13FE920030C8CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = rainbowOnlineMallTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rainbowOnlineMall.app/rainbowOnlineMall";
+			};
+			name = Debug;
+		};
+		5F70B7631B13FE920030C8CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = rainbowOnlineMallTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rainbowOnlineMall.app/rainbowOnlineMall";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5F70B7361B13FE920030C8CC /* Build configuration list for PBXProject "rainbowOnlineMall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F70B75C1B13FE920030C8CC /* Debug */,
+				5F70B75D1B13FE920030C8CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F70B75E1B13FE920030C8CC /* Build configuration list for PBXNativeTarget "rainbowOnlineMall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F70B75F1B13FE920030C8CC /* Debug */,
+				5F70B7601B13FE920030C8CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F70B7611B13FE920030C8CC /* Build configuration list for PBXNativeTarget "rainbowOnlineMallTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F70B7621B13FE920030C8CC /* Debug */,
+				5F70B7631B13FE920030C8CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5F70B7331B13FE920030C8CC /* Project object */;
+}

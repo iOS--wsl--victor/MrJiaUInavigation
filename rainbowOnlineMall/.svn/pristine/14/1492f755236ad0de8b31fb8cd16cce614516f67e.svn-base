@@ -1,0 +1,72 @@
+//
+//  HomeViewController.m
+//  rainbowOnlineMall
+//
+//  Created by Mr_ Jia on 15/5/26.
+//  Copyright (c) 2015年 Mr_ Jia. All rights reserved.
+//
+
+#import "HomeViewController.h"
+#import "Home_ClassificationViewController.h"
+
+@interface HomeViewController ()<UISearchBarDelegate>
+@property (strong,nonatomic) UISearchBar *homeSearchBar;
+
+@end
+
+@implementation HomeViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self prepareUI];
+    [self prepareData];
+    [self prepareNotification];
+
+}
+- (void)prepareUI{
+    [self base_addLeftButtonItemWithImage:@"navigationbar_friendsearch"
+                      imageForHighlighted:@"navigationbar_friendsearch_highlighted"];
+    //创建导航搜索
+    self.homeSearchBar = [MallBaseViewController searchBarWithplaceholder:@"搜索.." tintColor:[UIColor redColor]];
+    self.homeSearchBar.delegate = self;
+    [self.navigationItemTitlview addSubview:self.homeSearchBar];
+    
+}
+- (void)prepareNotification{
+    
+    
+}
+
+- (void)prepareData{
+    
+    
+}
+#pragma mark ---------父类方法---------
+-(void)base_navigation_LeftBarButtonPressed{
+    Home_ClassificationViewController *classificationViewController = [[Home_ClassificationViewController alloc]init];
+    classificationViewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:classificationViewController
+                                         animated:YES];
+}
+
+-(void)base_navigation_RightBarButtonPressed{
+    
+    NSLog(@"父类方法：%s",__FUNCTION__);
+}
+#pragma mark ---------搜索框代理事件---------
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    [self searchBarAction];
+}
+- (void)searchBarAction{
+    NSLog(@"当前seacrhbar内填写的内容是--%@--",self.homeSearchBar.text);
+}
+#pragma mark ---------响应键盘事件---------
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.homeSearchBar resignFirstResponder];
+}
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+@end

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>32D93EBA-F26D-4CB5-8214-FD8BA7C9717A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>rainbowOnlineMall</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5d85576c-4a01-0010-9100-9b3d8da6b27a++7726</key>
+		<string>svn://svn.kfit.com.cn/ios/teacherGo/rainbowOnlineMall</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>rainbowOnlineMall.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5d85576c-4a01-0010-9100-9b3d8da6b27a++7726</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>5d85576c-4a01-0010-9100-9b3d8da6b27a++7726</key>
+		<string>svn://svn.kfit.com.cn</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>svn://svn.kfit.com.cn/ios/teacherGo/rainbowOnlineMall/rainbowOnlineMall.xcworkspace</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5d85576c-4a01-0010-9100-9b3d8da6b27a++7726</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5d85576c-4a01-0010-9100-9b3d8da6b27a++7726</string>
+			<key>IDESourceControlWCCName</key>
+			<string>rainbowOnlineMall</string>
+		</dict>
+	</array>
+</dict>
+</plist>

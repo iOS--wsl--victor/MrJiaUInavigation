@@ -1,0 +1,241 @@
+//
+//  MallBaseViewController.m
+//  rainbowOnlineMall
+//
+//  Created by Mr_ Jia on 15/5/26.
+//  Copyright (c) 2015年 Mr_ Jia. All rights reserved.
+//
+
+#import "MallBaseViewController.h"
+
+#define  NAVIGATION_LEFT_BARBUTTON_SIZE       CGSizeMake(30, 30)  // navigation 左边按钮的尺寸
+#define  NAVIGATION_RIGHT_BARBUTTON_SIZE      CGSizeMake(30, 30)  // navigation 右边按钮的尺寸
+#define  NAVIGATION_BARBUTTON_FONT_SIZE       16.0
+
+@interface MallBaseViewController ()<UIGestureRecognizerDelegate>
+
+@end
+
+@implementation MallBaseViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    [self base_navView];
+    self.view.backgroundColor = MallColor(235, 235, 241);
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+}
+
+//隐藏系统nav
+- (void)base_navView{
+    //创建的是毛玻璃效果view
+     JCRBlurView *navigationView = [[JCRBlurView alloc]initWithFrame:CGRectMake(0, 0, MainScreenSizeWidth, K_S_N_Bar_H)];
+//    navigationView.backgroundColor  = [[UIColor orangeColor]colorWithAlphaComponent:1.0];
+    [navigationView setBlurTintColor:[UIColor orangeColor]];
+    [self.view addSubview:navigationView];
+    self.navigationView             = navigationView;
+    CGFloat navigationItemTitlviewX = 45;
+    CGFloat navigationItemTitlviewY = 24;
+    CGFloat navigationItemTitlviewW = MainScreenSizeWidth-2*navigationItemTitlviewX;
+    CGFloat navigationItemTitlviewH = 40;
+    UIView *navigationItemTitlview  = [[UIView alloc]initWithFrame:CGRectMake(navigationItemTitlviewX, navigationItemTitlviewY, navigationItemTitlviewW, navigationItemTitlviewH)];
+    navigationItemTitlview.backgroundColor = [UIColor clearColor];
+    [navigationView addSubview:navigationItemTitlview];
+    self.navigationItemTitlview = navigationItemTitlview;
+}
+//添加navtitle
+- (void)base_addNavigationItemTitleWithTitle:(NSString *)titleString{
+    UILabel *itemTitle = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.navigationItemTitlview.frame.size.width, self.navigationItemTitlview.frame.size.height)];
+    itemTitle.font          = [UIFont fontWithName:@"Helvetica-Bold" size:18];
+    itemTitle.textAlignment = NSTextAlignmentCenter;
+    itemTitle.textColor     = [UIColor whiteColor];
+    itemTitle.text          = titleString;
+    [self.navigationItemTitlview addSubview:itemTitle];
+}
+#pragma mark --- 导航条自定义按钮 ---
+/*
+ size 按钮的尺寸
+ frontImageName 常态下的图片
+ selectedImageName 选中状态的图片
+ isLeft 是否显示在导航条左边
+ target 按钮点击事件的接收者
+ event 按钮点击事件方法
+ title 按钮图片上显示文字（没有传nil）
+ 
+ 谨记 设置的尺寸 要与图片的大小一致，否则选中的时候会很奇怪
+ */
+-(void)base_createUIBarButtonWithSize:(CGSize)size andFrontImageName:(NSString*) frontImageName andSelectedImageName:(NSString *) selectedImageName isLeft:(BOOL)isLeft target:(id)target event:(SEL)selector title:(NSString*)title{
+    UIView *backButtonView = [[UIView alloc] init];
+    UIButton *myBackButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    if (isLeft) {
+        backButtonView.frame   = CGRectMake(10, NavItemButtonWH, size.width, size.height);
+        myBackButton.frame     = backButtonView.frame;
+    }else{
+        backButtonView.frame   = CGRectMake(MainScreenSizeWidth-(NavItemButtonWH+10), NavItemButtonWH, size.width, size.height);
+        myBackButton.frame     = backButtonView.frame;
+    }
+    if (title){
+        myBackButton.titleLabel.adjustsFontSizeToFitWidth = YES;
+        myBackButton.titleLabel.font = [UIFont systemFontOfSize:15];
+        [myBackButton setTitle:title
+                      forState:UIControlStateNormal];
+        [myBackButton setTitle:title
+                      forState:UIControlStateSelected];
+        [myBackButton setTitle:title
+                      forState:UIControlStateHighlighted];
+        // 这里的设置很关键 不同的状态 不同的颜色
+        [myBackButton setTitleColor:[UIColor whiteColor]
+                           forState:UIControlStateNormal];
+        [myBackButton setTitleColor:MallColor(123, 123, 123)
+                           forState:UIControlStateSelected];
+        [myBackButton setTitleColor:MallColor(123, 123, 123)
+                           forState:UIControlStateHighlighted];
+    }
+    //按钮的常态背景图
+    UIImage *frontImage = [UIImage imageNamed:frontImageName];
+    [myBackButton setBackgroundImage:[frontImage stretchableImageWithLeftCapWidth:size.width topCapHeight:0] forState:UIControlStateNormal];
+    //按钮选中背景图
+    if (selectedImageName){
+        UIImage *selectedImage=[UIImage imageNamed:selectedImageName];
+        [myBackButton setBackgroundImage:[selectedImage stretchableImageWithLeftCapWidth:size.width topCapHeight:0]
+                                forState:UIControlStateHighlighted];
+        [myBackButton setBackgroundImage:[selectedImage stretchableImageWithLeftCapWidth:size.width topCapHeight:0]
+                                forState:UIControlStateSelected];
+    }
+    [myBackButton setEnabled:YES];
+    [myBackButton addTarget:target
+                     action:selector
+           forControlEvents:UIControlEventTouchUpInside];
+    [backButtonView addSubview:myBackButton];
+    [self.navigationView addSubview:myBackButton];
+    if (isLeft){
+        self.LeftButton = myBackButton;
+    }else{
+        self.RightButton = myBackButton;
+    }
+}
+
+//添加navigation左侧按钮
+- (void)base_addLeftButtonItemWithImage:(NSString *)imageName imageForHighlighted:(NSString *)HighlightImage{
+    CGFloat LeftButtonX  = 10;
+    CGFloat LeftButtonY  = NavItemButtonY;
+    CGFloat LeftButtonW  = NavItemButtonWH;
+    CGFloat LeftButtonH  = NavItemButtonWH;
+    UIButton *LeftButton = [[UIButton alloc]initWithFrame:CGRectMake(LeftButtonX, LeftButtonY, LeftButtonW, LeftButtonH)];
+    [LeftButton setBackgroundImage:[UIImage imageNamed:imageName]
+                          forState:UIControlStateNormal];
+    [LeftButton setBackgroundImage:[UIImage imageNamed:HighlightImage]
+                          forState:UIControlStateHighlighted];
+    [LeftButton addTarget:self
+                   action:@selector(base_navigation_LeftBarButtonPressed)
+         forControlEvents:UIControlEventTouchUpInside];
+    [self.navigationView addSubview:LeftButton];
+    self.LeftButton = LeftButton;
+}
+// 自定义-导航栏-左边（返回）按钮
+-(void)base_createLeftNavigationBarButtonWithFrontImage:(NSString *) frontImageName andSelectedImageName:(NSString *)selectedImageName andTitle:(NSString *)title{
+    
+    [self base_createUIBarButtonWithSize:NAVIGATION_LEFT_BARBUTTON_SIZE
+                       andFrontImageName:frontImageName
+                    andSelectedImageName:selectedImageName
+                                  isLeft:YES
+                                  target:self
+                                   event:@selector(base_navigation_LeftBarButtonPressed)
+                                   title:title];
+}
+
+//添加右侧按钮
+- (void)base_addRightButtonItemWithImage:(NSString *)imageName imageForHighlighted:(NSString *)HighlightImage{
+    CGFloat RightButtonX  = MainScreenSizeWidth-(NavItemButtonWH+10);
+    CGFloat RightButtonY  = NavItemButtonY;
+    CGFloat RightButtonW  = NavItemButtonWH;
+    CGFloat RightButtonH  = NavItemButtonWH;
+    UIButton *RightButton = [[UIButton alloc]initWithFrame:CGRectMake(RightButtonX, RightButtonY, RightButtonW, RightButtonH)];
+    [RightButton setBackgroundImage:[UIImage imageNamed:imageName]
+                           forState:UIControlStateNormal];
+    [RightButton setBackgroundImage:[UIImage imageNamed:HighlightImage]
+                           forState:UIControlStateHighlighted];
+    [RightButton addTarget:self
+                    action:@selector(base_navigation_RightBarButtonPressed)
+          forControlEvents:UIControlEventTouchUpInside];
+    [self.navigationView addSubview:RightButton];
+    self.RightButton = RightButton;
+}
+// 自定义-导航栏-右边 按钮
+- (void)base_createRightNavigationBarButtonWithFrontImage:(NSString *) frontImageName andSelectedImageName:(NSString *)selectedImageName andTitle:(NSString *)title{
+    
+    [self base_createUIBarButtonWithSize:NAVIGATION_RIGHT_BARBUTTON_SIZE
+                       andFrontImageName:frontImageName
+                    andSelectedImageName:selectedImageName
+                                  isLeft:NO
+                                  target:self
+                                   event:@selector(base_navigation_RightBarButtonPressed)
+                                   title:title];
+}
+
+// 自定义-导航栏-左边（返回）按钮
+- (void)base_createLeftNavigationBarButtonWithFrontImage:(NSString *) frontImageName andSelectedImageName:(NSString *)selectedImageName andTitle:(NSString *)title andSize:(CGSize)size{
+    
+    [self base_createUIBarButtonWithSize:size
+                       andFrontImageName:frontImageName
+                    andSelectedImageName:selectedImageName
+                                  isLeft:YES
+                                  target:self
+                                   event:@selector(base_navigation_LeftBarButtonPressed)
+                                   title:title];
+}
+
+// 自定义-导航栏-右边 按钮
+- (void)base_createRightNavigationBarButtonWithFrontImage:(NSString *) frontImageName andSelectedImageName:(NSString *)selectedImageName andTitle:(NSString *)title andSize:(CGSize)size{
+    
+    [self base_createUIBarButtonWithSize:size
+                       andFrontImageName:frontImageName
+                    andSelectedImageName:selectedImageName
+                                  isLeft:NO
+                                  target:self
+                                   event:@selector(base_navigation_RightBarButtonPressed)
+                                   title:title];
+}
+
++ (UISearchBar *)searchBarWithplaceholder:(NSString *)placeholder tintColor:(UIColor *)tintColor{
+    UISearchBar *homeSearchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, navItemViewY, MainScreenSizeWidth-90, NavItemButtonWH)];
+    //    去除搜索框背景
+    for (UIView *view in homeSearchBar.subviews) {
+        if ([view isKindOfClass:NSClassFromString(@"UISearchBarBackground")]) {
+            [view removeFromSuperview];
+            break;
+        }
+        if ([view isKindOfClass:NSClassFromString(@"UIView")] && view.subviews.count > 0) {
+            [[view.subviews objectAtIndex:0] removeFromSuperview];
+            break;
+        }
+    }
+    //搜索框 编辑光标
+    homeSearchBar.tintColor     = tintColor;
+    homeSearchBar.placeholder   = placeholder;
+    homeSearchBar.returnKeyType = UIReturnKeySearch;
+    return homeSearchBar;
+}
+- (void)prepareNotification{
+    NSLog(@"父类方法：%s",__FUNCTION__);
+}
+- (void)prepareData{
+    NSLog(@"父类方法：%s",__FUNCTION__);
+}
+- (void)prepareUI{
+    NSLog(@"父类方法：%s",__FUNCTION__);
+}
+// 子类中复写这个方法
+-(void)base_navigation_LeftBarButtonPressed{
+    NSLog(@"父类方法：%s",__FUNCTION__);
+    [self.navigationController popViewControllerAnimated:YES];
+}
+-(void)base_navigation_RightBarButtonPressed{
+    NSLog(@"父类方法：%s",__FUNCTION__);
+}
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+@end

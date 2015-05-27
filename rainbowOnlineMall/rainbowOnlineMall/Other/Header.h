@@ -1,0 +1,43 @@
+//
+//  Header.h
+//  rainbowOnlineMall
+//
+//  Created by Mr_ Jia on 15/5/26.
+//  Copyright (c) 2015年 Mr_ Jia. All rights reserved.
+//
+
+#ifndef rainbowOnlineMall_Header_h
+#define rainbowOnlineMall_Header_h
+//=======================   头文件   =======================
+
+#import "AFNetworking.h"
+#import "MJExtension.h"
+#import "SVProgressHUD.h"
+#import "POP.h"                       //faceBook 开源的动态效果
+#import "JHChainableAnimations.h"     //使用非常简单的 view平移动画效果
+#import "Masonry.h"                   //autolaout 拓展 给控件定位用的
+#import "Reachability.h"              //网络连接检测工具 检测当前网络是Wlan 移动网络 还是无网状态
+#import "DXAlertView.h"
+
+//=======================   私有工具   ======================
+
+#import "UIView+HY.h"
+
+//=======================   部分宏   =======================
+
+#define MallColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]         // RGB颜色
+#define MallRandomColor MallColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))  // 随机色
+
+#define MainScreenSizeWidth     [UIScreen mainScreen].bounds.size.width
+#define MainScreenSizeHeight    [UIScreen mainScreen].bounds.size.height
+#define Main_SIZE_TIMES         [UIScreen mainScreen].bounds.size.width / 320.0
+
+#define  K_StatusBar_H            20  // 状态栏
+#define  K_NavigationBar_H        44  // 导航栏
+#define  K_TabBar_Height          49  // 控制器栏
+#define  K_S_N_Bar_H              64
+
+//=======================   第三方   =======================
+//fir.im BugHD
+static NSString * const GeneralKey = @"4a871cbc9c0307a143ac3594f1853aff";
+#endif

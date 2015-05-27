@@ -1,0 +1,91 @@
+//
+//  HomeViewController.m
+//  rainbowOnlineMall
+//
+//  Created by Mr_ Jia on 15/5/26.
+//  Copyright (c) 2015年 Mr_ Jia. All rights reserved.
+//
+
+#import "HomeViewController.h"
+#import "Home_ClassificationViewController.h"
+
+@interface HomeViewController ()<UISearchBarDelegate>
+@property (strong,nonatomic) UISearchBar *homeSearchBar;
+
+@end
+
+@implementation HomeViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self prepareUI];
+    [self prepareData];
+    [self prepareNotification];
+}
+- (void)prepareUI{
+    [self base_createLeftNavigationBarButtonWithFrontImage:nil
+                                      andSelectedImageName:nil
+                                                  andTitle:@"分类"
+                                                   andSize:CGSizeMake(30, 30)];
+    [self base_createRightNavigationBarButtonWithFrontImage:@"navigationbar_more"
+                                       andSelectedImageName:@"navigationbar_more_highlighted"
+                                                   andTitle:nil 
+                                                    andSize:CGSizeMake(30, 30)];
+    //创建导航搜索
+    self.homeSearchBar = [MallBaseViewController searchBarWithplaceholder:@"搜索.." tintColor:[UIColor redColor]];
+    self.homeSearchBar.delegate = self;
+    [self.navigationItemTitlview addSubview:self.homeSearchBar];
+    
+    //创建背景ScrollView
+    
+    
+}
+- (void)prepareNotification{
+    
+    
+}
+
+- (void)prepareData{
+    
+    
+}
+#pragma mark ---------父类方法---------
+- (void)base_navigation_LeftBarButtonPressed{
+    Home_ClassificationViewController *classificationViewController = [[Home_ClassificationViewController alloc]init];
+    classificationViewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController presentViewController:classificationViewController animated:YES completion:NULL];
+}
+
+- (void)base_navigation_RightBarButtonPressed{
+    DXAlertView *alertView = [[DXAlertView alloc]initWithTitle:@"标题"
+                                                   contentText:@"惦记了首页的右侧按钮"
+                                               leftButtonTitle:@"嗯哼"
+                                              rightButtonTitle:@"嗯哈"];
+    [alertView show];
+    alertView.leftBlock = ^() {
+        NSLog(@"点击了左侧的按钮");
+    };
+    alertView.rightBlock = ^() {
+        NSLog(@"点击了右侧的按钮");
+    };
+    alertView.dismissBlock = ^() {
+        NSLog(@"取消了");
+    };
+}
+#pragma mark ---------搜索框代理事件---------
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    [self searchBarAction];
+}
+- (void)searchBarAction{
+    NSLog(@"当前seacrhbar内填写的内容是--%@--",self.homeSearchBar.text);
+}
+#pragma mark ---------响应键盘事件---------
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.homeSearchBar resignFirstResponder];
+}
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+@end
